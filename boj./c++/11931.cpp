@@ -20,3 +20,6 @@ int main(){
             
     return 0;
 }
+//sort(v.begin(), v.end(), greater<자료형>());    //내림차순 (Descending order)
+//sort(v.begin(), v.end(), less<자료형>());        //오름차순 (default = Ascending order)
+출처: https://blockdmask.tistory.com/178 [개발자 지망생]
