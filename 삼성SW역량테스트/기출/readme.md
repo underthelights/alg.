@@ -37,3 +37,9 @@ go hard :)
 | [17825](https://www.acmicpc.net/problem/17825) | 주사위 윷놀이      |     |                         |             |
 | [19235](https://www.acmicpc.net/problem/19235) | 모노미노도미노     |     |                         |             |
 | [19236](https://www.acmicpc.net/problem/19236) | 청소년 상어        |     |                         |             |
+| [19237](https://www.acmicpc.net/problem/19237) | 어른 상어             |     |                         |             |
+| [19238](https://www.acmicpc.net/problem/19238) | 스타트 택시             |     |                         |             |
+| [20055](https://www.acmicpc.net/problem/20055) | 컨베이어 벨트 위의 로봇             |     |                         |             |
+| [20056](https://www.acmicpc.net/problem/20056) | 마법사 상어와 파이어볼            |     |                         |             |
+| [20057](https://www.acmicpc.net/problem/20057) | 마법사 상어와 토네이도             |     |                         |             |
+| [20058](https://www.acmicpc.net/problem/20058) |  마법사 상어와 파이어스톰             |     |                         |             |
