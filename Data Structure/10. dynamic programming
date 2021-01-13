@@ -1,0 +1,117 @@
+ex. with fibonacci
+- without memoization
+<pre><code>{
+#include <iostream>
+#define O ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define LL long long
+
+using namespace std;
+LL ops=0;
+LL f(int n);
+
+int main(){
+    O;
+    int n; cin>>n;
+    for(int j=0;j<n;j++)
+    {
+        cout << "F_" << j << " = " << f(j) << "; " << ops << " calculations" <<"\n";
+        ops=0;
+    }
+    return 0;
+}
+
+LL f(int n){
+    ops++;
+    if(n==0) return 0;
+    if(n==1) return 1;
+    
+    return f(n-2)+f(n-1);
+}
+}</code></pre>
+
+
+results:
+
+<pre><code>{
+20
+F_0 = 0; 1 calculations
+F_1 = 1; 1 calculations
+F_2 = 1; 3 calculations
+F_3 = 2; 5 calculations
+F_4 = 3; 9 calculations
+F_5 = 5; 15 calculations
+F_6 = 8; 25 calculations
+F_7 = 13; 41 calculations
+F_8 = 21; 67 calculations
+F_9 = 34; 109 calculations
+F_10 = 55; 177 calculations
+F_11 = 89; 287 calculations
+F_12 = 144; 465 calculations
+F_13 = 233; 753 calculations
+F_14 = 377; 1219 calculations
+F_15 = 610; 1973 calculations
+F_16 = 987; 3193 calculations
+F_17 = 1597; 5167 calculations
+F_18 = 2584; 8361 calculations
+F_19 = 4181; 13529 calculations
+Program ended with exit code: 0
+}</code></pre>
+
+
+- with memoization
+<pre><code>{
+#include <iostream>
+#define O ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define LL long long
+
+using namespace std;
+LL ops=0;
+LL d[300]={0};
+LL f(int n);
+
+int main(){
+    O;
+    int n; cin>>n;
+    for(int j=0;j<n;j++)
+    {
+        cout << "F_" << j << " = " << f(j) << "; " << ops << " calculations" <<"\n";
+        
+    }
+    return 0;
+}
+
+LL f(int n){
+    ops++;
+    if(d[n]) return d[n];
+    if(n==0) return 0;
+    if(n==1) return 1;
+    
+    return d[n]=f(n-2)+f(n-1);
+}
+
+}</code></pre>
+
+
+<pre><code>{20
+F_0 = 0; 1 calculations
+F_1 = 1; 2 calculations
+F_2 = 1; 5 calculations
+F_3 = 2; 8 calculations
+F_4 = 3; 11 calculations
+F_5 = 5; 14 calculations
+F_6 = 8; 17 calculations
+F_7 = 13; 20 calculations
+F_8 = 21; 23 calculations
+F_9 = 34; 26 calculations
+F_10 = 55; 29 calculations
+F_11 = 89; 32 calculations
+F_12 = 144; 35 calculations
+F_13 = 233; 38 calculations
+F_14 = 377; 41 calculations
+F_15 = 610; 44 calculations
+F_16 = 987; 47 calculations
+F_17 = 1597; 50 calculations
+F_18 = 2584; 53 calculations
+F_19 = 4181; 56 calculations
+Program ended with exit code: 0
+}</code></pre>
