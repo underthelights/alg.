@@ -146,3 +146,179 @@ Do a stable sort on A[ ] by jth digit;
 — 같은 값을 가진 item들은 sorting 후에도 원래의 순서가 유지되는 성질을 가진 sort를 일컫는다. 
 
 ### 4. Selection
+
+#### 4.1. 평균 선형시간 Selection Algorithm
+```
+select (A, p, r, i){
+  ▷ 배열 A[p ... r]에서 i번째 작은 원소를 찾는다 
+  if(p=r)thenreturnA[p]; ▷원소가하나뿐인경우. i는반드시1.
+  q ← partition(A, p, r) ;
+  k←q-p+1; ▷k:기준원소가전체에서k번째작은원소임을의미
+  if (i < k) 
+    then return select(A, p, q-1, i) ; ▷ 왼쪽 그룹으로 범위를 좁힘
+  }
+  else if (i = k) 
+    then return A[q] ; else return select(A, p, q-1, i) ;
+  ▷ 기준원소가 바로 찾는 원소임 ▷ 오른쪽 그룹으로 범위를 좁힘
+```
+- 평균 수행시간: Θ(n) 
+- 최악의 경우 수행시간: Θ(n2)
+
+#### 4.2. Linear Select
+
+```
+linearSelect (A, p, r, i) {
+▷ 배열 A[p...r]에서 i번째 작은 원소를 찾는다 
+1원소의 총 수가 5개 이하이면 원하는 원소를 찾고 알고리즘을 끝낸다. 
+2 전체 원소들을 5개씩의 원소를 가진 개의 그룹으로 나눈다.
+(원소의 총수가 5의 배수가 아니면 이중 한 그룹은 5개 미만이 된다.) 
+3 각 그룹에서 중앙값을 (원소가 5개이면 3번째 원소) 찾는다.
+이렇게 찾은 중앙값들을 m1, m2, ..., m n/5 이라 하자. 
+4m1,m2,...,mn/5 들의 중앙값 M을 재귀적으로 구한다.
+원소의 총수가 홀수면 중앙값이 하나이므로 문제가 없고, 원소의 총수가 짝수일 경우는 두 중앙값 중 아무거나 임의로 선택한다. 
+▷ call linearSelect( ) 5 M을 기준원소로 삼아 전체 원소를 분할한다. (M보다 작거나 같은 것은
+M의 왼쪽에, M보다 큰 것은 M의 오른쪽에 오도록)
+6 분할된 두 그룹 중 적합한 쪽을 선택하여 단계 1~6을 재귀적으로 반복한다. ▷ 
+call linearSelect( ) 
+}
+
+```
+### 5. Search Tree
+
+#### 5.1. BST
+
+t: 트리의 루트 노드
+x: 검색하고자 하는 키
+r: 새 노드
+
+##### 5.1.1. 검색
+
+
+
+```
+treeSearch(t, x) {
+  if (t=NIL or key[t]=x) then return t; if (x < key[t])
+  then return treeSearch(left[t], x); else return treeSearch(right[t], x);
+}
+```
+
+
+##### 5.1.2. 삽입
+
+```
+treeInsert(t, x) {
+  if (t=NIL) then { 
+    key[r] ← x;
+    return r; 
+  }
+  if (x < key(t))
+    then {
+      left[t] ← treeInsert(left[t], x); 
+      return t;
+    } 
+    else {
+      right[t] ← treeInsert(right[t], x); 
+      return t;
+    }
+}
+
+```
+##### 5.1.3. 삭제 
+t: 트리의 루트 노드
+r: 삭제하고자 하는 노드 ▷ Case 1
+
+```
+Sketch-TreeDelete(t, r) {
+  if (r이 리프 노드) 
+    then 그냥 r을 버린다;
+  else if (r의 자식이 하나만 있음) 
+    then r의 부모가 r의 자식을 직접 가리키도록 한다;
+  else 
+    r의 오른쪽 서브트리의 최소원소 노드 s를 삭제하고, s를 r 자리에 놓는다;
+}
+```
+
+t: 트리의 루트 노드
+r: 삭제하고자 하는 노드 p: r의 부모 노드
+
+
+```
+treeDelete(t, r, p) {
+  if (r = t) then root ← deleteNode(t); else if (r = left[p])
+  then left[p] ← deleteNode(r); else right[p] ← deleteNode(r);
+} 
+
+deleteNode(r) {
+  if (left[r] = right[r] = NIL) then return NIL;
+  else if (left[r] = NIL and right[r] ≠ NIL)
+    then return right[r]; 
+  else if (left[r] ≠ NIL and right[r] = NIL) 
+    then return left[r]; 
+  else {
+    s ← right[r];
+  while (left[s] ≠ NIL){
+    parent ← s; s ← left[s];} key[r] ← key[s];
+    if (s = right[r]) then right[r] ← right[s]; 
+    else left[parent] ← right[s];
+  return r; 
+  }
+}
+
+```
+
+#### B Tree
+##### 삽입
+BTreeInsert(t, x) {
+B-Tree에서의 삽입
+▷ t:트리의루트노드
+x를 삽입할 리프 노드 r을 찾는다; x를 r에 삽입한다;
+if (r에 오버플로우 발생) then clearOverflow(r);
+} clearOverflow(r) {
+if (r의 형제 노드 중 여유가 있는 노드가 있음) then {r의 남는 키를 넘긴다}; else {
+} }
+r을 둘로 분할하고 가운데 키를 부모 노드로 넘긴다;
+if (부모 노드 p에 오버플로우 발생) then clearOverflow(p);
+
+##### 삭제
+
+BTreeDelete(t, x, v) {
+B-Tree에서의 삭제
+▷ t : 트리의 루트 노드
+if (v가 리프 노드 아님) then {
+x의 직후원소 y를 가진 리프 노드를 찾는다; x와 y를 맞바꾼다;
+▷ x : 삭제하고자 하는 키 ▷ v : x를 갖고 있는 노드
+}
+리프노드에서x를제거하고이리프노드를 r이라한다; if (r에서 언더플로우 발생) then clearUnderflow(r);
+} clearUnderflow(r) {
+if ( r의 형제 노드 중 키를 하나 내놓을 수 있는 여분을 가진 노드가 있음) then { r이 키를 넘겨받는다;}
+else {
+} }
+r의 형제 노드와 r을 합병한다;
+if (부모 노드 p에 언더플로우 발생) then clearUnderflow(p);
+
+### 6. 
+
+```
+```
+### 7. 
+
+```
+```
+### 8. 
+
+```
+```
+### 9. 
+
+```
+```
+### 10. 
+
+```
+```
+### 11. 
+
+```
+```
+### 12. 
+### 13. 
