@@ -1,1 +1,1 @@
-문병로 교수님
+Prof. Byung-Ro Moon 
