@@ -281,20 +281,28 @@ if (부모 노드 p에 오버플로우 발생) then clearOverflow(p);
 
 ##### 삭제
 
+```
 BTreeDelete(t, x, v) {
-B-Tree에서의 삭제
 ▷ t : 트리의 루트 노드
-if (v가 리프 노드 아님) then {
-x의 직후원소 y를 가진 리프 노드를 찾는다; x와 y를 맞바꾼다;
-▷ x : 삭제하고자 하는 키 ▷ v : x를 갖고 있는 노드
-}
-리프노드에서x를제거하고이리프노드를 r이라한다; if (r에서 언더플로우 발생) then clearUnderflow(r);
-} clearUnderflow(r) {
-if ( r의 형제 노드 중 키를 하나 내놓을 수 있는 여분을 가진 노드가 있음) then { r이 키를 넘겨받는다;}
-else {
-} }
+  if (v가 리프 노드 아님) 
+    then {
+      x의 직후원소 y를 가진 리프 노드를 찾는다; x와 y를 맞바꾼다;
+    ▷ x : 삭제하고자 하는 키 ▷ v : x를 갖고 있는 노드
+  }
+리프노드에서 x를 제거하고 이 리프노드를 r이라 한다; 
+  if (r에서 언더플로우 발생) 
+    then clearUnderflow(r);
+  } clearUnderflow(r) 
+  {
+  if ( r의 형제 노드 중 키를 하나 내놓을 수 있는 여분을 가진 노드가 있음) 
+    then { r이 키를 넘겨받는다;
+  }else {
+  } 
+  }
 r의 형제 노드와 r을 합병한다;
 if (부모 노드 p에 언더플로우 발생) then clearUnderflow(p);
+
+```
 
 ### 6. 
 
