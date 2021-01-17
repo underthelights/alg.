@@ -319,6 +319,49 @@ if (부모 노드 p에 언더플로우 발생) then clearUnderflow(p);
 ### 9. 
 
 ```
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+#define O ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define LL long long
+
+int dp[101][101];
+int inf = 987654321;
+
+int main(){
+    int n,m=0;
+    cin>>n>>m;
+
+    for(int i=1;i<=n;i++){
+        fill(dp[i], dp[i]+101, inf);
+        dp[i][i]=0;
+    }
+
+    while (m--) {
+        int u, v, c;
+        cin >> u >> v >> c;
+        dp[u][v] = min(dp[u][v], c);
+    }
+
+    for (int k = 1; k <= n; k++) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);
+            }
+        }
+    }
+
+    for (int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(dp[i][j] >= inf)
+                dp[i][j] = 0;
+            cout << dp[i][j]<<' ';
+        }cout<<"\n";
+    }
+    return 0;
+}
 ```
 ### 10. 
 
