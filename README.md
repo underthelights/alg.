@@ -14,79 +14,73 @@ clean code / architecture
 
 1. 체계적으로 문제 풀기
 
-2. 코딩과 디버깅
+2. [코딩과 디버깅](https://www.geeksforgeeks.org/software-engineering-debugging/)
 
 3. 분석과 증명
 
-4. brute-force
+4. [brute-force](https://practice.geeksforgeeks.org/problems/which-algorithms-come-under-brute-force-greedy-and-dynamic-programming)
 
-5. 정렬
+5. [정렬](https://www.geeksforgeeks.org/sorting-algorithms/)
 
-6. 재귀
+6. [재귀](https://www.geeksforgeeks.org/recursion/)
 
-7. 분할 정복
+7. [분할 정복](https://www.geeksforgeeks.org/divide-and-conquer/)
 
-8. 구간 합
+8. [구간 합](https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/)
 
-9. 투 포인터
+9. [투 포인터](https://www.geeksforgeeks.org/two-pointers-technique/)
 
-10. 수학 기초
+10. [수학 기초]
 
-11. 큐
+11. [큐](https://www.geeksforgeeks.org/queue-data-structure/)
 
-12. 스택
+12. [스택](https://www.geeksforgeeks.org/stack-data-structure/)
 
-13. 트리 기초
+13. [트리 기초 - BT](https://www.geeksforgeeks.org/binary-tree-data-structure/)
 
-14. 탐색(BFS, DFS)
+14. 탐색([BFS](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/), [DFS](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/))
 
-15. 그래프 기초
+15. [그래프 기초](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 
-16. 백 트래킹
+16. [백 트래킹](https://www.geeksforgeeks.org/backtracking-algorithms/)
 
-17. 우선순위 큐
-
-​
+17. [우선순위 큐](https://www.geeksforgeeks.org/priority-queue-set-1-introduction/)
 
 ### PS 초급
 
-​
+1. [이분 탐색(parametric search)](https://www.crocus.co.kr/1000)
 
-1. 이분 탐색(parametric search)
+2. [그리디](https://www.geeksforgeeks.org/greedy-algorithms/)
 
-2. 그리디
+3. [DP 기초](https://www.geeksforgeeks.org/dynamic-programming/)
 
-3. DP 기초
+4. [좌표 압축](https://www.geeksforgeeks.org/convert-an-array-to-reduced-form-set-1-simple-and-hashing/)
 
-4. 좌표 압축
+5. [수학 초급(소수 판정)](https://www.geeksforgeeks.org/prime-numbers/)
 
-5. 수학 초급(소수 판정)
+6. [union-find](https://www.geeksforgeeks.org/union-find/)
 
-6. union-find
+7. MST([크루스칼](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/), [프림](https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/))
 
-7. MST(크루스칼, 프림)
+8. [다익스트라](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
 
-8. 다익스트라
+9. [플로이드](https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/)
 
-9. 플로이드
+10. [벨만 포드](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/)
 
-10. 벨만 포드
+11. [위상정렬](https://www.geeksforgeeks.org/topological-sorting/)
 
-11. 위상정렬
+12. [bitwise operation](https://www.geeksforgeeks.org/bitwise-algorithms/)
 
-12. bitwise operation
-
-13. trie
+13. [trie](https://www.geeksforgeeks.org/trie-insert-and-search/)
 
 14. 기하 기초
 
 15. 삼분 탐색(tenary search)
 
-​
 
 ### PS 중급
 
-​
 
 1. 정수론(페르마 소정리, 에라토스 테네스)
 
@@ -206,5 +200,5 @@ clean code / architecture
 
 16. eertree
 
-17. voronoi
+17. [voronoi]
 [출처] PS 테크트리|작성자 박진한
