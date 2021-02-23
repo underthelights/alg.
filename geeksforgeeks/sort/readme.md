@@ -1,3 +1,26 @@
+### 1. terminology
+#### 1.1 in-place sorting
+	- (definition)
+		- 출력을 생성하는 데 일정한 추가 공간을 사용합니다 (given array만 수정). 목록 내에서 요소의 순서를 수정하여 목록을 정렬합니다.
+	- ex.
+├── in-place 
+│   ├── Insertion sort
+│   └── Selection sort
+├── NOT in place
+│   ├── Merge sort
+│   └── Counting Sort
+
+#### 1.2. internal/external sorting
+  - External : 정렬해야 하는 모든 데이터를 한 번에 메모리에 저장할 수 없는 경우 
+    - 외부 정렬은 대량의 데이터에 사용됩니다. 
+    - Merge sort and its transformation
+    - sometimes HDD, CD, etc is used as an external storage
+  - Internal : 모든 데이터가 메모리에 저장되면 정렬을 내부 정렬이라고 합니다.
+
+#### 1.3. Sorting Algs' Stability
+  - Stability
+
+
 - Selection Sort
 
 ![selection sort](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Selection-sort-flowchart.jpg)
