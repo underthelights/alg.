@@ -9,15 +9,9 @@ clean code / architecture
 
 
 ### PS 입문
-
-​
-
 1. 체계적으로 문제 풀기
-
 2. [코딩과 디버깅](https://www.geeksforgeeks.org/software-engineering-debugging/)
-
 3. 분석과 증명
-
 4. [brute-force](https://practice.geeksforgeeks.org/problems/which-algorithms-come-under-brute-force-greedy-and-dynamic-programming)
 
 5. [정렬](https://www.geeksforgeeks.org/sorting-algorithms/)
