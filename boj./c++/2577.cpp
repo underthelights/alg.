@@ -13,3 +13,24 @@ int main(){
     for(int i=0;i<=9;i++)
         std::cout<<numarr[i]<<"\n";
 }
+
+/*
+#include <algorithm>
+#include <iostream>
+using namespace std;
+#define O ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+int a,b,c,x[10],i;
+
+int main() {
+    O;
+    cin >> a >> b >> c;
+    a*=b*c;
+    while(a){
+        x[a%10]++;
+        a/=10;
+    }
+    for(i=0;i<10;i++)
+        cout << x[i] <<"\n";
+   return 0;
+}
+*/
