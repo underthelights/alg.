@@ -1,20 +1,22 @@
-#include <iostream>
 #include <algorithm>
-using namespace std;
+#include <iostream>
 
-int arr[1000000] = {0};
+using namespace std;
+#define O ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define LL long long
 
 int main(){
-    ios::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+    O;
 
-    int N; 
-    cin >> N;
+    int arr[100001]={0};
 
-    for(int i = 0 ; i < N; i++) cin >> arr[i];
-    
-    sort(arr,arr+N,less<int>());
-    for(int i = 0 ; i <N; i++)
-        cout << arr[i] << "\n";
-            
+    int n;
+    cin >> n;
+
+    for (int i=0;i<n;i++) cin >> arr[i];
+    sort(arr, arr+n);
+
+    for (int i=0;i<n;i++) cout << arr[i] << "\n";
     return 0;
 }
+ 
