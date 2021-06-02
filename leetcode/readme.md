@@ -1,6 +1,6 @@
 # LeetCode
 
-LeetCode Problem Solving in Python.
+Problem Solving in Python.
 
 | # | Title | Difficulty | Solution |
 |---| ----- | ---------- | -------- |
